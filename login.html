@@ -81,185 +81,244 @@
 
 
 
-<!-- ==========================================
-     404 / WEBSITE UNDER MAINTENANCE
-     INFALLIBLE ACADEMY
-========================================== -->
 
-<section class="maintenance-section" id="maintenance">
+<section class="ia-login-section" id="login">
 
-    <!-- ANIMATED BACKGROUND -->
-    <div class="maintenance-bg">
+  <!-- Animated Background -->
+  <div class="login-bg-orbit orbit-one"></div>
+  <div class="login-bg-orbit orbit-two"></div>
 
-        <div class="maintenance-orbit orbit-a"></div>
-        <div class="maintenance-orbit orbit-b"></div>
+  <div class="login-floating-robot">🤖</div>
+  <div class="login-floating-tool tool-one">⚙️</div>
+  <div class="login-floating-tool tool-two">🔧</div>
+  <div class="login-floating-tool tool-three">🛠️</div>
+  <div class="login-circuit circuit-one"></div>
+  <div class="login-circuit circuit-two"></div>
 
-        <!-- FLOATING ROBOTS -->
-        <div class="maintenance-robot robot-a">
-            🤖
-            <span class="robot-status">FIXING...</span>
+  <div class="login-container">
+
+    <!-- LEFT SIDE: LOGIN -->
+    <div class="login-left">
+
+      <div class="login-heading">
+        <span class="login-small-tag">WELCOME TO INFALLIBLE ACADEMY</span>
+        <h1>Welcome <span>Back!</span></h1>
+        <p>Login to continue your journey of learning, building and innovating.</p>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="iaLoginForm" class="ia-auth-form">
+
+        <div class="login-role-heading">
+          Select Login Type
         </div>
 
-        <div class="maintenance-robot robot-b">🤖</div>
+        <!-- Role Selection -->
+        <div class="login-role-selector">
 
-        <!-- FLOATING TOOLS -->
-        <div class="maintenance-tool tool-a">🔧</div>
-        <div class="maintenance-tool tool-b">⚙️</div>
-        <div class="maintenance-tool tool-c">🪛</div>
-        <div class="maintenance-tool tool-d">🔩</div>
-        <div class="maintenance-tool tool-e">⚒️</div>
-        <div class="maintenance-tool tool-f">🔨</div>
+          <label class="role-option active">
+            <input type="radio" name="loginRole" value="user" checked>
+            <span class="role-icon">👨‍🎓</span>
+            <span>
+              <strong>User Login</strong>
+              <small>Student / Member</small>
+            </span>
+          </label>
 
-        <!-- CIRCUIT DECORATIONS -->
-        <div class="maintenance-circuit circuit-a"></div>
-        <div class="maintenance-circuit circuit-b"></div>
-        <div class="maintenance-circuit circuit-c"></div>
+          <label class="role-option">
+            <input type="radio" name="loginRole" value="admin">
+            <span class="role-icon">🛡️</span>
+            <span>
+              <strong>Admin Login</strong>
+              <small>Administrator</small>
+            </span>
+          </label>
+
+        </div>
+
+        <!-- Email -->
+        <div class="login-input-group">
+          <label for="loginEmail">Email Address</label>
+          <div class="login-input-box">
+            <span>✉️</span>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Enter your email address"
+              required
+            >
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="login-input-group">
+          <label for="loginPassword">Password</label>
+          <div class="login-input-box">
+            <span>🔒</span>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your password"
+              required
+            >
+            <button type="button" id="toggleLoginPassword"
+              class="password-toggle">Show</button>
+          </div>
+        </div>
+
+        <!-- Remember / Forgot -->
+        <div class="login-options">
+          <label class="remember-option">
+            <input type="checkbox" id="rememberLogin">
+            <span>Remember me</span>
+          </label>
+
+          <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-submit-btn">
+          <span>Login to Account</span>
+          <span>→</span>
+        </button>
+
+        <p id="loginMessage" class="login-message"></p>
+
+        <div class="login-divider">
+          <span>OR</span>
+        </div>
+
+        <p class="login-signup-text">
+          Don't have an account?
+          <a href="#" id="showSignup">Sign Up</a>
+        </p>
+
+      </form>
+
+      <!-- SIGN UP FORM -->
+      <form id="iaSignupForm" class="ia-auth-form signup-form" hidden>
+
+        <div class="signup-heading">
+          <h2>Create Your Account</h2>
+          <p>Join Infallible Academy and start learning today.</p>
+        </div>
+
+        <div class="login-input-group">
+          <label for="signupName">Full Name</label>
+          <div class="login-input-box">
+            <span>👤</span>
+            <input type="text" id="signupName"
+              placeholder="Enter your full name" required>
+          </div>
+        </div>
+
+        <div class="login-input-group">
+          <label for="signupEmail">Email Address</label>
+          <div class="login-input-box">
+            <span>✉️</span>
+            <input type="email" id="signupEmail"
+              placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="login-input-group">
+          <label for="signupPassword">Create Password</label>
+          <div class="login-input-box">
+            <span>🔒</span>
+            <input type="password" id="signupPassword"
+              placeholder="Create a password" minlength="8" required>
+          </div>
+        </div>
+
+        <div class="login-input-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="login-input-box">
+            <span>🔐</span>
+            <input type="password" id="confirmPassword"
+              placeholder="Confirm your password" minlength="8" required>
+          </div>
+        </div>
+
+        <button type="submit" class="login-submit-btn">
+          <span>Create Account</span>
+          <span>→</span>
+        </button>
+
+        <p id="signupMessage" class="login-message"></p>
+
+        <p class="login-signup-text">
+          Already have an account?
+          <a href="#" id="showLogin">Login</a>
+        </p>
+
+      </form>
+
+      <div class="login-footer-note">
+        <span>🔐</span>
+        Secure learning environment by Infallible Academy
+      </div>
 
     </div>
 
+    <!-- RIGHT SIDE: HELLO VIDEO -->
+    <div class="login-right">
 
-    <div class="container maintenance-container">
+      <div class="login-video-decoration">
+        <div class="video-orbit-ring"></div>
+        <div class="video-orbit-ring ring-two"></div>
 
-        <!-- LEFT CONTENT -->
-        <div class="maintenance-content">
+        <div class="login-video-frame">
 
-            <div class="maintenance-eyebrow">
-                <span class="maintenance-live-dot"></span>
-                INFALLIBLE ACADEMY • SYSTEM UPDATE
+          <div class="video-top-label">
+            <span class="video-live-dot"></span>
+            HELLO FROM OUR TEAM
+          </div>
+
+          <video
+            class="login-hello-video"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="images/maintenance-boy.webm" type="video/webm">
+            Your browser does not support WebM video.
+          </video>
+
+          <div class="video-bottom-label">
+            <span>👋</span>
+            <div>
+              <strong>Hey there!</strong>
+              <small>Let's create something amazing.</small>
             </div>
-
-            <div class="maintenance-404">
-                4<span>0</span>4
-            </div>
-
-            <h1>
-                Oops! We're
-                <span>Under Maintenance.</span>
-            </h1>
-
-            <p class="maintenance-description">
-                Our little robots are working hard behind the scenes!
-                We're upgrading our digital workspace to bring you
-                an even better learning experience.
-            </p>
-
-
-            <!-- COMING SOON -->
-            <div class="coming-soon-box">
-
-                <div class="coming-soon-icon">
-                    🚀
-                </div>
-
-                <div>
-                    <strong>Something Amazing Is Coming!</strong>
-                    <small>
-                        New features, smarter learning and exciting
-                        STEM experiences.
-                    </small>
-                </div>
-
-            </div>
-
-
-            <!-- REPAIR STATUS -->
-            <div class="repair-status">
-
-                <div class="repair-status-top">
-                    <span>🤖 ROBOT TEAM STATUS</span>
-                    <strong>WORKING...</strong>
-                </div>
-
-                <div class="repair-progress">
-                    <span></span>
-                </div>
-
-                <div class="repair-status-bottom">
-                    <span>Fixing circuits</span>
-                    <span>Building innovation</span>
-                </div>
-
-            </div>
-
-
-            <!-- BUTTONS -->
-            <div class="maintenance-actions">
-
-                <a href="index.html"
-                   class="maintenance-home-btn">
-                    ← Back to Home
-                </a>
-
-                <a href="contact.html"
-                   class="maintenance-contact-btn">
-                    Contact Us
-                </a>
-
-            </div>
-
-
-            <div class="maintenance-footer-text">
-                LEARN • BUILD • INNOVATE
-            </div>
+          </div>
 
         </div>
 
-
-        <!-- RIGHT VIDEO -->
-        <div class="maintenance-visual">
-
-            <div class="video-glow"></div>
-
-            <div class="maintenance-video-frame">
-
-                <div class="video-top-label">
-                    <span class="video-status-dot"></span>
-                    HELLO FROM OUR TEAM
-                </div>
-
-                <video
-                    class="maintenance-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata">
-
-                    <source
-                        src="images/maintenance-boy.webm"
-                        type="video/webm">
-
-                    Your browser does not support WebM video.
-
-                </video>
-
-                <div class="video-bottom-label">
-                    <span>👋</span>
-                    <div>
-                        <strong>Hey there!</strong>
-                        <small>We'll be back soon.</small>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- ROBOT FIXING THE VIDEO AREA -->
-            <div class="repair-robot repair-robot-one">
-                🤖
-                <span class="repair-message">REPAIRING...</span>
-            </div>
-
-            <div class="repair-tool repair-tool-one">🔧</div>
-            <div class="repair-tool repair-tool-two">⚙️</div>
-
+        <div class="video-floating-card card-robot">
+          🤖 Robotics & AI
         </div>
+
+        <div class="video-floating-card card-code">
+          💻 Learn to Code
+        </div>
+
+        <div class="video-floating-card card-innovation">
+          ✨ Think. Build. Innovate.
+        </div>
+
+      </div>
+
+      <div class="login-right-caption">
+        <h2>Learn. Build. Innovate.</h2>
+        <p>Your ideas have the power to shape the future.</p>
+      </div>
 
     </div>
 
+  </div>
 </section>
 
-
+  
   
 
   
@@ -355,7 +414,7 @@
             <div class="footer-column">
 
                 <h4>
-                    <a href="explore.html">SCHOOL TRANSFORMATION</a>
+                    <a href="explore.html#school-transformation">SCHOOL TRANSFORMATION</a>
                 </h4>
 
                 <ul>
@@ -373,7 +432,7 @@
             <div class="footer-column">
 
                 <h4>
-                    <a href="explore.html">CAMPUS INNOVATION</a>
+                    <a href="explore.html#campus-innovation">CAMPUS INNOVATION</a>
                 </h4>
 
                 <ul>
@@ -390,7 +449,7 @@
             <div class="footer-column">
 
                 <h4>
-                    <a href="explore.html">LEARN & BUILD</a>
+                    <a href="explore.html#learn-build">LEARN & BUILD</a>
                 </h4>
 
                 <ul>

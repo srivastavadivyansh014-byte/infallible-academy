@@ -192,3 +192,116 @@ if (certificateForm) {
     });
 
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const loginForm = document.getElementById("iaLoginForm");
+  const signupForm = document.getElementById("iaSignupForm");
+
+  const showSignup = document.getElementById("showSignup");
+  const showLogin = document.getElementById("showLogin");
+
+  // USER / ADMIN SELECTION
+  const roleOptions = document.querySelectorAll(".role-option");
+
+  roleOptions.forEach(option => {
+    option.addEventListener("click", function () {
+      roleOptions.forEach(item => item.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  // SHOW SIGNUP
+  showSignup.addEventListener("click", function (e) {
+    e.preventDefault();
+    loginForm.hidden = true;
+    signupForm.hidden = false;
+  });
+
+  // SHOW LOGIN
+  showLogin.addEventListener("click", function (e) {
+    e.preventDefault();
+    signupForm.hidden = true;
+    loginForm.hidden = false;
+  });
+
+  // SHOW / HIDE PASSWORD
+  const togglePassword = document.getElementById("toggleLoginPassword");
+  const passwordInput = document.getElementById("loginPassword");
+
+  togglePassword.addEventListener("click", function () {
+    const isPassword = passwordInput.type === "password";
+
+    passwordInput.type = isPassword ? "text" : "password";
+    this.textContent = isPassword ? "Hide" : "Show";
+  });
+
+  // DEMO LOGIN
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const role = document.querySelector(
+      'input[name="loginRole"]:checked'
+    ).value;
+
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = passwordInput.value;
+    const message = document.getElementById("loginMessage");
+
+    if (!email || !password) {
+      message.textContent = "Please enter your email and password.";
+      return;
+    }
+
+    message.style.color = "#b7791f";
+
+    if (role === "admin") {
+      message.textContent =
+        "Admin login selected. Connect your secure admin authentication system.";
+    } else {
+      message.textContent =
+        "User login selected. Connect your user authentication system.";
+    }
+
+    console.log("Demo Login:", {
+      role: role,
+      email: email
+    });
+  });
+
+  // DEMO SIGNUP
+  signupForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const password = document.getElementById("signupPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const message = document.getElementById("signupMessage");
+
+    if (password.length < 8) {
+      message.style.color = "#dc3545";
+      message.textContent = "Password must be at least 8 characters.";
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      message.style.color = "#dc3545";
+      message.textContent = "Passwords do not match.";
+      return;
+    }
+
+    message.style.color = "#b7791f";
+    message.textContent =
+      "Demo registration form completed. Connect an authentication backend to create your account.";
+  });
+
+  // FORGOT PASSWORD DEMO
+  document.getElementById("forgotPasswordLink").addEventListener(
+    "click",
+    function (e) {
+      e.preventDefault();
+      alert("Password reset feature will be available soon.");
+    }
+  );
+
+});
