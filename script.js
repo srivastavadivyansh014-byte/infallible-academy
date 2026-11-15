@@ -305,3 +305,61 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const impactSection = document.querySelector(".our-impact");
+
+  if (!impactSection) return;
+
+  const counters = impactSection.querySelectorAll(".impact-counter");
+  let hasAnimated = false;
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting && !hasAnimated) {
+
+        hasAnimated = true;
+
+        counters.forEach(counter => {
+
+          const target = Number(counter.dataset.target);
+          const duration = 1800;
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+
+            const progress = Math.min(
+              (currentTime - startTime) / duration, 1
+            );
+
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+            counter.textContent = Math.floor(
+              target * easedProgress
+            );
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              counter.textContent = target;
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+
+        });
+
+        observer.disconnect();
+      }
+
+    });
+
+  }, { threshold: 0.3 });
+
+  observer.observe(impactSection);
+
+});
