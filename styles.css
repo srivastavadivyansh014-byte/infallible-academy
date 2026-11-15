@@ -3611,3 +3611,2001 @@ h1 {
     }
 
 }
+
+/* ==========================================
+   CONTACT US - LIGHT ROBOTICS THEME
+========================================== */
+
+.contact-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 95px 0;
+
+    background:
+        radial-gradient(
+            circle at 8% 20%,
+            rgba(83, 166, 226, 0.14),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 35%,
+            rgba(110, 120, 245, 0.10),
+            transparent 30%
+        ),
+        #eaf5ff;
+
+    color: #17213b;
+}
+
+/* ROBOTICS BACKGROUND DECORATION */
+
+.contact-circuit {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    border: 1px solid rgba(43, 119, 184, 0.18);
+    opacity: 0.65;
+}
+
+.circuit-one {
+    width: 220px;
+    height: 220px;
+    top: 100px;
+    right: -65px;
+    border-radius: 35%;
+
+    transform: rotate(35deg);
+
+    animation: circuitFloat 10s ease-in-out infinite;
+}
+
+.circuit-two {
+    width: 150px;
+    height: 150px;
+    bottom: 250px;
+    left: -50px;
+    border-radius: 50%;
+
+    animation: circuitFloat 8s ease-in-out infinite reverse;
+}
+
+.circuit-three {
+    width: 90px;
+    height: 90px;
+    top: 48%;
+    right: 43%;
+    border-radius: 20px;
+
+    transform: rotate(45deg);
+    animation: circuitFloat 12s ease-in-out infinite;
+}
+
+/* Decorative circuit nodes */
+
+.contact-section::before,
+.contact-section::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: #438fc9;
+
+    box-shadow:
+        45px 30px 0 rgba(91, 133, 214, 0.45),
+        90px -20px 0 rgba(65, 175, 202, 0.45),
+        130px 55px 0 rgba(91, 133, 214, 0.35);
+
+    animation: nodePulse 4s ease-in-out infinite;
+}
+
+.contact-section::before {
+    top: 180px;
+    left: 7%;
+}
+
+.contact-section::after {
+    right: 12%;
+    bottom: 300px;
+    animation-delay: 2s;
+}
+
+/* SECTION HEADING */
+
+.contact-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.contact-heading .eyebrow {
+    justify-content: center;
+    color: #2876bb;
+}
+
+.contact-heading h2 {
+    color: #17213b;
+    font-size: clamp(36px, 5vw, 57px);
+    line-height: 1.15;
+    font-weight: 850;
+    letter-spacing: -1.8px;
+    margin: 15px 0;
+}
+
+.contact-gradient {
+    color: #2876bb;
+}
+
+.contact-heading p {
+    max-width: 650px;
+    margin: auto;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* MAIN LAYOUT */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* LEFT CONTACT INFORMATION */
+
+.contact-info {
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #d5e6f5;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(44, 91, 140, 0.06);
+}
+
+.contact-info-heading h3 {
+    color: #17213b;
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+.contact-info-heading p {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 27px;
+}
+
+/* CONTACT CARDS */
+
+.contact-info-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+    margin-bottom: 14px;
+
+    background: #ffffff;
+    border: 1px solid #dfebf6;
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateX(5px);
+    border-color: #70b5e5;
+
+    box-shadow: 0 8px 22px rgba(40, 112, 174, 0.10);
+}
+
+.contact-icon {
+    width: 49px;
+    height: 49px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #eaf4ff;
+    border-radius: 12px;
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #2876bb;
+}
+
+.contact-info-text {
+    min-width: 0;
+}
+
+.contact-info-text small {
+    display: block;
+    color: #7b91a9;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.contact-info-text h4 {
+    color: #17213b;
+    font-size: 15px;
+    font-weight: 750;
+
+    margin-bottom: 4px;
+    overflow-wrap: anywhere;
+}
+
+.contact-info-text span {
+    color: #3886c3;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.contact-card-arrow {
+    margin-left: auto;
+    color: #8baac5;
+    font-size: 19px;
+}
+
+.contact-info-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 24px;
+
+    color: #6d8298;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.contact-note-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #42b98b;
+
+    box-shadow: 0 0 0 5px rgba(66, 185, 139, 0.12);
+}
+
+/* RIGHT FORM */
+
+.contact-form-wrapper {
+    padding: 32px;
+
+    background: #ffffff;
+    border: 1px solid #d9e8f5;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(44, 91, 140, 0.07);
+}
+
+.contact-form-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.form-eyebrow,
+.map-eyebrow {
+    color: #2876bb;
+    font-size: 10px;
+    font-weight: 850;
+    letter-spacing: 1.2px;
+}
+
+.contact-form-heading h3 {
+    color: #17213b;
+    font-size: 25px;
+    margin: 8px 0;
+}
+
+.contact-form-heading p {
+    color: #7b879b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.form-decoration {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf4ff;
+    color: #2876bb;
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+/* FORM FIELDS */
+
+.contact-form-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #35435a;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+
+    background: #f7fbff;
+    border: 1px solid #dce8f3;
+    border-radius: 10px;
+
+    color: #17213b;
+    font-family: inherit;
+    font-size: 13px;
+
+    outline: none;
+    transition: 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a1afc0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4997d2;
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(73, 151, 210, 0.10);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 125px;
+}
+
+/* DEMO SUBMIT BUTTON */
+
+.contact-submit-button {
+    width: 100%;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #2876bb;
+    border: none;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 750;
+
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.contact-submit-button span {
+    font-size: 18px;
+}
+
+.form-demo-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    color: #8998a9;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* MAP SECTION */
+
+.contact-map-section {
+    margin-top: 65px;
+
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #d7e7f5;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(44, 91, 140, 0.06);
+}
+
+.contact-map-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+.contact-map-heading h3 {
+    color: #17213b;
+    font-size: 24px;
+    margin: 7px 0;
+}
+
+.contact-map-heading p {
+    color: #748399;
+    font-size: 13px;
+}
+
+.map-direction-button {
+    padding: 12px 18px;
+
+    background: #2876bb;
+    border-radius: 9px;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 750;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.map-direction-button:hover {
+    background: #155b98;
+    transform: translateY(-2px);
+}
+
+.contact-map-frame {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+
+    border-radius: 14px;
+    background: #dceeff;
+}
+
+.contact-map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* SCROLL REVEAL */
+
+.contact-section .reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.contact-section .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ROBOTICS ANIMATIONS */
+
+@keyframes circuitFloat {
+    0%, 100% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+
+    50% {
+        translate: 15px -20px;
+        rotate: 12deg;
+    }
+}
+
+@keyframes nodePulse {
+    0%, 100% {
+        opacity: 0.3;
+        scale: 0.8;
+    }
+
+    50% {
+        opacity: 0.9;
+        scale: 1.2;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 65px 0;
+    }
+
+    .contact-heading {
+        margin-bottom: 35px;
+    }
+
+    .contact-heading h2 {
+        font-size: 37px;
+        letter-spacing: -1px;
+    }
+
+    .contact-heading p {
+        font-size: 14px;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map-section {
+        padding: 18px;
+        margin-top: 40px;
+    }
+
+    .contact-map-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-map-frame {
+        height: 300px;
+    }
+
+    .contact-info-card {
+        padding: 14px;
+        gap: 11px;
+    }
+
+    .contact-info-text h4 {
+        font-size: 13px;
+    }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-circuit,
+    .contact-section::before,
+    .contact-section::after,
+    .contact-section .reveal {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .contact-section .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+/* CONTACT MULTIPLE PHONE & EMAIL LINKS */
+
+.contact-info-static {
+    cursor: default;
+}
+
+.contact-info-text h4 a {
+    color: #17213b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-text h4 a:hover {
+    color: #2876bb;
+}
+
+.contact-info-text h4 + h4 {
+    margin-top: 7px;
+}
+
+/* ==========================================
+   CERTIFICATE VERIFICATION
+   LIGHT ROBOTICS THEME
+========================================== */
+
+.certificate-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 750px;
+    padding: 90px 0;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(68, 153, 220, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 60%,
+            rgba(115, 123, 230, 0.12),
+            transparent 32%
+        ),
+        #eaf5ff;
+
+    color: #17213b;
+}
+
+/* BACKGROUND */
+
+.certificate-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* ORBIT CIRCLES */
+
+.certificate-orbit {
+    position: absolute;
+    border: 1px solid rgba(55, 126, 190, 0.17);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    width: 430px;
+    height: 430px;
+    top: 10%;
+    left: -180px;
+    animation: certificateRotate 35s linear infinite;
+}
+
+.orbit-two {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    right: -100px;
+    animation: certificateRotate 25s linear infinite reverse;
+}
+
+.orbit-three {
+    width: 180px;
+    height: 180px;
+    bottom: -60px;
+    left: 42%;
+    animation: certificateRotate 20s linear infinite;
+}
+
+/* ROBOT DECORATIONS */
+
+.robot-decoration {
+    position: absolute;
+    color: #4789c5;
+    opacity: 0.32;
+    font-size: 35px;
+
+    animation: robotFloat 5s ease-in-out infinite;
+}
+
+.robot-one {
+    top: 15%;
+    left: 9%;
+    font-size: 48px;
+}
+
+.robot-two {
+    top: 23%;
+    right: 13%;
+    font-size: 55px;
+    animation-delay: 1s;
+}
+
+.robot-three {
+    bottom: 17%;
+    left: 12%;
+    font-size: 42px;
+    animation-delay: 2s;
+}
+
+.robot-four {
+    top: 12%;
+    right: 27%;
+    font-size: 32px;
+    animation-delay: 0.5s;
+}
+
+.robot-five {
+    bottom: 15%;
+    right: 12%;
+    font-size: 50px;
+    animation-delay: 1.5s;
+}
+
+/* CIRCUIT LINES */
+
+.circuit-decoration {
+    position: absolute;
+    width: 150px;
+    height: 90px;
+
+    border-top: 2px solid rgba(54, 128, 191, 0.16);
+    border-right: 2px solid rgba(54, 128, 191, 0.16);
+}
+
+.circuit-a {
+    top: 28%;
+    left: 0;
+    transform: rotate(15deg);
+}
+
+.circuit-b {
+    right: 0;
+    bottom: 25%;
+    transform: rotate(195deg);
+}
+
+/* MAIN CONTAINER */
+
+.certificate-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+/* HEADING */
+
+.certificate-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 38px;
+}
+
+.certificate-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    color: #2876bb;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 2px;
+}
+
+.certificate-eyebrow span {
+    width: 25px;
+    height: 2px;
+    background: #4b91c9;
+}
+
+.certificate-heading h1 {
+    color: #17213b;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 850;
+    letter-spacing: -2px;
+    line-height: 1.15;
+    margin: 18px 0;
+}
+
+.certificate-heading h1 span {
+    color: #2876bb;
+}
+
+.certificate-heading p {
+    color: #66768c;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* VERIFICATION CARD */
+
+.certificate-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 38px;
+
+    background: rgba(255, 255, 255, 0.93);
+    border: 1px solid #d7e7f6;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(39, 100, 151, 0.10),
+        0 3px 12px rgba(39, 100, 151, 0.04);
+
+    backdrop-filter: blur(12px);
+    text-align: center;
+}
+
+/* CARD ICON */
+
+.certificate-card-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f3ff;
+    border-radius: 18px;
+
+    animation: certificatePulse 3s ease-in-out infinite;
+}
+
+.certificate-card-icon svg {
+    width: 34px;
+    height: 34px;
+    fill: #2876bb;
+}
+
+.certificate-card-heading h2 {
+    color: #17213b;
+    font-size: 24px;
+    margin-bottom: 9px;
+}
+
+.certificate-card-heading p {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* FORM */
+
+#certificateForm {
+    text-align: left;
+}
+
+#certificateForm label {
+    display: block;
+    color: #35435a;
+    font-size: 13px;
+    font-weight: 750;
+    margin-bottom: 9px;
+}
+
+.certificate-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 16px;
+
+    background: #f5faff;
+    border: 1px solid #d7e6f4;
+    border-radius: 11px;
+
+    transition: 0.3s ease;
+}
+
+.certificate-input-wrap:focus-within {
+    border-color: #438ec9;
+    box-shadow: 0 0 0 4px rgba(67, 142, 201, 0.10);
+    background: #ffffff;
+}
+
+.input-certificate-icon {
+    color: #438ec9;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.certificate-input-wrap input {
+    width: 100%;
+    height: 54px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #17213b;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.certificate-input-wrap input::placeholder {
+    color: #a1afc0;
+}
+
+/* BUTTON */
+
+.certificate-verify-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #2876bb;
+    border: none;
+    border-radius: 11px;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.certificate-verify-btn:hover {
+    background: #175b99;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(40, 118, 187, 0.22);
+}
+
+.verify-arrow {
+    font-size: 19px;
+}
+
+/* RESULT */
+
+.certificate-result {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+
+    border-radius: 10px;
+    text-align: left;
+}
+
+.certificate-result.show {
+    display: block;
+}
+
+.certificate-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 22px;
+
+    color: #8190a4;
+    font-size: 11px;
+}
+
+/* FEATURES */
+
+.certificate-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    max-width: 850px;
+    margin: 38px auto 0;
+}
+
+.certificate-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid #d9e8f5;
+    border-radius: 12px;
+}
+
+.certificate-feature > span {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e3f1ff;
+    color: #2876bb;
+
+    border-radius: 9px;
+    font-weight: 800;
+}
+
+.certificate-feature strong {
+    display: block;
+    color: #263650;
+    font-size: 11px;
+}
+
+.certificate-feature small {
+    display: block;
+    color: #8795a7;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+/* HELP */
+
+.certificate-help {
+    margin-top: 30px;
+    text-align: center;
+    color: #78889c;
+    font-size: 13px;
+}
+
+.certificate-help a {
+    color: #2876bb;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+/* ANIMATIONS */
+
+@keyframes certificateRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes robotFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+@keyframes certificatePulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 118, 187, 0.08);
+    }
+
+    50% {
+        transform: scale(1.07);
+        box-shadow: 0 0 25px rgba(40, 118, 187, 0.16);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .certificate-section {
+        padding: 65px 0;
+    }
+
+    .certificate-heading h1 {
+        font-size: 38px;
+    }
+
+    .certificate-card {
+        padding: 25px 18px;
+    }
+
+    .certificate-features {
+        grid-template-columns: 1fr;
+    }
+
+    .robot-one {
+        left: 2%;
+    }
+
+    .robot-two {
+        right: 2%;
+    }
+
+    .robot-three,
+    .robot-four,
+    .robot-five {
+        opacity: 0.18;
+    }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .certificate-orbit,
+    .robot-decoration,
+    .certificate-card-icon {
+        animation: none !important;
+    }
+
+}
+
+/* ==========================================
+   404 MAINTENANCE SECTION
+   LIGHT ROBOTICS THEME
+========================================== */
+
+.maintenance-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 750px;
+    padding: 80px 5%;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(66, 158, 220, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(125, 111, 235, 0.12),
+            transparent 32%
+        ),
+        #eaf5ff;
+
+    color: #17213b;
+}
+
+/* BACKGROUND */
+
+.maintenance-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* ORBITS */
+
+.maintenance-orbit {
+    position: absolute;
+    border: 1px solid rgba(47, 130, 193, 0.16);
+    border-radius: 50%;
+}
+
+.orbit-a {
+    width: 480px;
+    height: 480px;
+    top: -170px;
+    right: -150px;
+    animation: maintenanceRotate 35s linear infinite;
+}
+
+.orbit-b {
+    width: 300px;
+    height: 300px;
+    bottom: -130px;
+    left: 20%;
+    animation: maintenanceRotate 25s linear infinite reverse;
+}
+
+/* FLOATING ROBOTS */
+
+.maintenance-robot {
+    position: absolute;
+    font-size: 48px;
+    opacity: 0.30;
+
+    animation: robotRepairFloat 5s ease-in-out infinite;
+}
+
+.robot-a {
+    top: 15%;
+    left: 5%;
+}
+
+.robot-b {
+    bottom: 12%;
+    right: 5%;
+    font-size: 40px;
+    animation-delay: 2s;
+}
+
+.robot-status {
+    position: absolute;
+    top: -12px;
+    left: 45px;
+
+    padding: 5px 8px;
+    border-radius: 5px;
+
+    background: #2876bb;
+    color: white;
+
+    font-size: 8px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* FLOATING TOOLS */
+
+.maintenance-tool {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.35;
+
+    animation: toolFloat 6s ease-in-out infinite;
+}
+
+.tool-a {
+    top: 20%;
+    left: 35%;
+}
+
+.tool-b {
+    top: 12%;
+    right: 35%;
+    animation-delay: 1s;
+}
+
+.tool-c {
+    top: 60%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.tool-d {
+    bottom: 15%;
+    left: 45%;
+    animation-delay: 1.5s;
+}
+
+.tool-e {
+    top: 75%;
+    right: 18%;
+    animation-delay: 2.5s;
+}
+
+.tool-f {
+    top: 35%;
+    right: 5%;
+    animation-delay: 0.5s;
+}
+
+/* CIRCUIT LINES */
+
+.maintenance-circuit {
+    position: absolute;
+    width: 130px;
+    height: 70px;
+
+    border-top: 2px solid rgba(51, 134, 194, 0.17);
+    border-right: 2px solid rgba(51, 134, 194, 0.17);
+}
+
+.circuit-a {
+    top: 35%;
+    left: -30px;
+}
+
+.circuit-b {
+    right: -30px;
+    top: 60%;
+    transform: rotate(180deg);
+}
+
+.circuit-c {
+    left: 48%;
+    bottom: 0;
+    transform: rotate(90deg);
+}
+
+/* MAIN LAYOUT */
+
+.maintenance-container {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+    gap: 60px;
+
+    max-width: 1400px;
+}
+
+/* LEFT CONTENT */
+
+.maintenance-content {
+    max-width: 680px;
+}
+
+.maintenance-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #2876bb;
+    font-size: 11px;
+    font-weight: 850;
+    letter-spacing: 1.5px;
+}
+
+.maintenance-live-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+
+    background: #29ae80;
+    box-shadow: 0 0 0 5px rgba(41, 174, 128, 0.12);
+
+    animation: liveBlink 1.5s infinite;
+}
+
+/* 404 NUMBER */
+
+.maintenance-404 {
+    margin-top: 22px;
+
+    color: #2876bb;
+    font-size: clamp(85px, 12vw, 145px);
+
+    font-weight: 950;
+    line-height: 0.95;
+    letter-spacing: -8px;
+
+    text-shadow: 5px 8px 0 rgba(40, 118, 187, 0.10);
+}
+
+.maintenance-404 span {
+    color: #9278e8;
+}
+
+/* HEADING */
+
+.maintenance-content h1 {
+    margin: 22px 0 16px;
+
+    color: #17213b;
+
+    font-size: clamp(35px, 4.5vw, 54px);
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: -1.8px;
+}
+
+.maintenance-content h1 span {
+    display: block;
+    color: #2876bb;
+}
+
+.maintenance-description {
+    max-width: 600px;
+
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.85;
+
+    margin-bottom: 25px;
+}
+
+/* COMING SOON BOX */
+
+.coming-soon-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 17px;
+
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #d6e7f6;
+    border-radius: 13px;
+
+    margin-bottom: 25px;
+}
+
+.coming-soon-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e5f1ff;
+    border-radius: 12px;
+
+    font-size: 25px;
+}
+
+.coming-soon-box strong {
+    display: block;
+    color: #253650;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.coming-soon-box small {
+    color: #7c8ca1;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* REPAIR STATUS */
+
+.repair-status {
+    padding: 17px;
+
+    background: #ffffff;
+    border: 1px solid #dceaf5;
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+}
+
+.repair-status-top,
+.repair-status-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.repair-status-top {
+    margin-bottom: 13px;
+
+    color: #4a607b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.repair-status-top strong {
+    color: #239a73;
+}
+
+.repair-progress {
+    width: 100%;
+    height: 7px;
+
+    background: #e8f0f8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.repair-progress span {
+    display: block;
+    width: 65%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #2876bb,
+        #9278e8,
+        #36b6a0
+    );
+
+    border-radius: inherit;
+
+    animation: repairProgress 3s ease-in-out infinite alternate;
+}
+
+.repair-status-bottom {
+    margin-top: 10px;
+
+    color: #98a4b4;
+    font-size: 10px;
+}
+
+/* BUTTONS */
+
+.maintenance-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.maintenance-home-btn,
+.maintenance-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 22px;
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 750;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.maintenance-home-btn {
+    background: #2876bb;
+    color: #ffffff;
+}
+
+.maintenance-home-btn:hover {
+    background: #175b99;
+    transform: translateY(-3px);
+}
+
+.maintenance-contact-btn {
+    color: #2876bb;
+    background: #ffffff;
+    border: 1px solid #cbdff1;
+}
+
+.maintenance-contact-btn:hover {
+    border-color: #2876bb;
+    transform: translateY(-3px);
+}
+
+.maintenance-footer-text {
+    margin-top: 30px;
+
+    color: #93a5b9;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* RIGHT VIDEO */
+
+.maintenance-visual {
+    position: relative;
+
+    min-height: 580px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-glow {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    background: rgba(72, 151, 218, 0.15);
+    filter: blur(75px);
+    border-radius: 50%;
+}
+
+/* VERTICAL VIDEO FRAME */
+
+.maintenance-video-frame {
+    position: relative;
+    z-index: 2;
+
+    width: min(100%, 340px);
+    aspect-ratio: 9 / 16;
+
+    padding: 10px;
+
+    background: #ffffff;
+    border: 1px solid #d4e5f5;
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 65px rgba(44, 94, 145, 0.17);
+
+    animation: videoFrameFloat 5s ease-in-out infinite;
+}
+
+/* VIDEO */
+
+.maintenance-video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+    background: #dceeff;
+}
+
+/* VIDEO LABELS */
+
+.video-top-label {
+    position: absolute;
+    z-index: 3;
+
+    top: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.91);
+    backdrop-filter: blur(10px);
+
+    border-radius: 8px;
+
+    color: #2876bb;
+    font-size: 9px;
+    font-weight: 850;
+    letter-spacing: 0.8px;
+}
+
+.video-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #2cad80;
+
+    animation: liveBlink 1.5s infinite;
+}
+
+.video-bottom-label {
+    position: absolute;
+    z-index: 3;
+
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+
+    border-radius: 10px;
+}
+
+.video-bottom-label > span {
+    font-size: 25px;
+}
+
+.video-bottom-label strong {
+    display: block;
+    color: #17213b;
+    font-size: 12px;
+}
+
+.video-bottom-label small {
+    display: block;
+    color: #7d8da1;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+/* REPAIR ROBOT */
+
+.repair-robot {
+    position: absolute;
+    z-index: 4;
+
+    font-size: 54px;
+
+    animation: robotFix 3s ease-in-out infinite;
+}
+
+.repair-robot-one {
+    right: -8%;
+    bottom: 13%;
+}
+
+.repair-message {
+    position: absolute;
+    top: -18px;
+    left: 35px;
+
+    padding: 6px 9px;
+
+    color: #ffffff;
+    background: #2876bb;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+    font-weight: 850;
+    white-space: nowrap;
+}
+
+/* REPAIR TOOLS */
+
+.repair-tool {
+    position: absolute;
+    z-index: 4;
+
+    font-size: 30px;
+}
+
+.repair-tool-one {
+    top: 15%;
+    left: 2%;
+
+    animation: toolSpin 5s linear infinite;
+}
+
+.repair-tool-two {
+    bottom: 25%;
+    left: 3%;
+
+    animation: toolSpin 7s linear infinite reverse;
+}
+
+/* ANIMATIONS */
+
+@keyframes maintenanceRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes robotRepairFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes toolFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(25deg);
+    }
+}
+
+@keyframes videoFrameFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes robotFix {
+    0%, 100% {
+        transform: translate(0, 0) rotate(-8deg);
+    }
+
+    25% {
+        transform: translate(-10px, -12px) rotate(8deg);
+    }
+
+    50% {
+        transform: translate(-5px, 0) rotate(-8deg);
+    }
+
+    75% {
+        transform: translate(8px, -8px) rotate(8deg);
+    }
+}
+
+@keyframes toolSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes liveBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@keyframes repairProgress {
+    from {
+        width: 35%;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .maintenance-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .maintenance-content {
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .maintenance-eyebrow {
+        justify-content: center;
+    }
+
+    .maintenance-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .coming-soon-box {
+        text-align: left;
+    }
+
+    .repair-status {
+        text-align: left;
+    }
+
+    .maintenance-actions {
+        justify-content: center;
+    }
+
+    .maintenance-visual {
+        min-height: 550px;
+    }
+
+    .repair-robot-one {
+        right: 5%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .maintenance-section {
+        padding: 55px 18px;
+    }
+
+    .maintenance-404 {
+        font-size: 95px;
+        letter-spacing: -5px;
+    }
+
+    .maintenance-content h1 {
+        font-size: 35px;
+    }
+
+    .maintenance-description {
+        font-size: 13px;
+    }
+
+    .maintenance-visual {
+        min-height: 480px;
+    }
+
+    .maintenance-video-frame {
+        width: min(75%, 280px);
+    }
+
+    .repair-robot-one {
+        right: -2%;
+        bottom: 10%;
+        font-size: 42px;
+    }
+
+    .repair-tool-one {
+        left: 0;
+    }
+
+    .maintenance-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .maintenance-home-btn,
+    .maintenance-contact-btn {
+        width: 100%;
+    }
+
+    .robot-one {
+        left: 1%;
+        font-size: 35px;
+    }
+
+    .robot-b {
+        right: 1%;
+        font-size: 32px;
+    }
+
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .maintenance-section * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}

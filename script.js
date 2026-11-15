@@ -121,3 +121,74 @@ const learningObserver = new IntersectionObserver(
 learningElements.forEach((element) => {
     learningObserver.observe(element);
 });
+/* CONTACT SECTION SCROLL ANIMATION */
+
+const contactRevealElements = document.querySelectorAll(
+    ".contact-section .reveal"
+);
+
+const contactObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+contactRevealElements.forEach((element) => {
+    contactObserver.observe(element);
+});
+
+/* ==========================================
+   CERTIFICATE VERIFICATION FORM
+========================================== */
+
+const certificateForm = document.getElementById("certificateForm");
+
+if (certificateForm) {
+
+    certificateForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const certificateInput =
+            document.getElementById("certificateNumber");
+
+        const result =
+            document.getElementById("certificateResult");
+
+        const certificateNumber =
+            certificateInput.value.trim();
+
+        if (!certificateNumber) {
+
+            result.className = "certificate-result show";
+
+            result.style.background = "#fff4e5";
+            result.style.color = "#a66a13";
+
+            result.textContent =
+                "Please enter your certificate number.";
+
+            return;
+        }
+
+        result.className = "certificate-result show";
+
+        result.style.background = "#eaf3ff";
+        result.style.color = "#2876bb";
+
+        result.textContent =
+            "Certificate number received: " +
+            certificateNumber +
+            ". Online verification database is not connected yet.";
+
+    });
+
+}
