@@ -7842,3 +7842,509 @@ h1 {
   background: #1d4ed8;
   transform: translateY(-2px);
 }
+
+
+
+/* ==============================
+   INFALLIBLE ACADEMY EVENTS
+============================== */
+
+.ia-events {
+  padding: 100px 7%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.events-heading {
+  text-align: center;
+  margin: 0 auto 65px;
+  max-width: 700px;
+}
+
+.events-tag {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.events-heading h2 {
+  font-size: clamp(35px, 5vw, 52px);
+  margin: 15px 0;
+  color: #101828;
+  font-weight: 800;
+}
+
+.events-heading h2 span {
+  color: #2563eb;
+}
+
+.events-heading p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 35px auto;
+  max-width: 1200px;
+  min-height: 390px;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.13);
+}
+
+.event-light {
+  background: #f1f5f9;
+  color: #101828;
+}
+
+.event-dark {
+  background: #071426;
+  color: #ffffff;
+}
+
+.event-image {
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.07);
+}
+
+.event-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.event-content {
+  padding: 45px 9%;
+}
+
+.event-category {
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.event-content h3 {
+  font-size: clamp(27px, 3vw, 38px);
+  margin: 15px 0;
+  font-weight: 800;
+}
+
+.event-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.event-dark .event-content p {
+  color: #a8b5c7;
+}
+
+.event-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 28px;
+}
+
+.event-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.event-info span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.event-info strong {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.event-dark .event-info strong {
+  color: #ffffff;
+}
+
+.event-register {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 13px 24px;
+  background: #2563eb;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.event-register:hover {
+  background: #1d4ed8;
+  gap: 25px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.event-register span {
+  font-size: 19px;
+}
+
+/* Scroll reveal animation */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .ia-events {
+    padding: 65px 5%;
+  }
+
+  .events-heading {
+    margin-bottom: 40px;
+  }
+
+  .event-card {
+    grid-template-columns: 1fr;
+    margin: 25px auto;
+  }
+
+  .event-image {
+    height: 260px;
+  }
+
+  .event-content {
+    padding: 32px 25px;
+  }
+
+  .event-dark .event-content {
+    order: 2;
+  }
+
+  .event-dark .event-image {
+    order: 1;
+  }
+
+  .event-info {
+    gap: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .event-card,
+  .event-image img {
+    transition: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==================================
+   ANIMATED STEM EVENT BACKGROUND
+================================== */
+
+.ia-events {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(37,99,235,.07), transparent 25%),
+    radial-gradient(circle at 90% 70%, rgba(139,92,246,.07), transparent 25%),
+    #ffffff;
+}
+
+.events-art-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.events-heading,
+.ia-events .event-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Atom artwork */
+
+.art-atom {
+  position: absolute;
+  top: 170px;
+  left: 3%;
+  width: 130px;
+  height: 130px;
+  opacity: .32;
+  animation: artFloat 6s ease-in-out infinite;
+}
+
+.atom-ring {
+  position: absolute;
+  inset: 20px 0;
+  border: 1.5px solid #2563eb;
+  border-radius: 50%;
+}
+
+.ring-one {
+  transform: rotate(0deg);
+}
+
+.ring-two {
+  transform: rotate(60deg);
+}
+
+.ring-three {
+  transform: rotate(-60deg);
+}
+
+.atom-core {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #2563eb;
+  border-radius: 50%;
+  top: 59px;
+  left: 59px;
+  box-shadow: 0 0 18px #2563eb;
+}
+
+/* Floating orbit circles */
+
+.art-orbit {
+  position: absolute;
+  border: 1px solid rgba(37,99,235,.18);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 220px;
+  height: 220px;
+  right: -80px;
+  top: 100px;
+  animation: artRotate 20s linear infinite;
+}
+
+.orbit-two {
+  width: 150px;
+  height: 150px;
+  right: -45px;
+  top: 135px;
+  animation: artRotate 14s linear infinite reverse;
+}
+
+.art-orbit span {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #3b82f6;
+  border-radius: 50%;
+  top: 30px;
+  left: 20px;
+  box-shadow: 0 0 15px #3b82f6;
+}
+
+/* Animated electronic chip */
+
+.art-chip {
+  position: absolute;
+  right: 8%;
+  bottom: 15%;
+  width: 65px;
+  height: 65px;
+  border: 2px solid rgba(139,92,246,.45);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  animation: artFloat 5s ease-in-out infinite;
+}
+
+.chip-inner {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #8b5cf6;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  color: #8b5cf6;
+}
+
+/* Circuit lines */
+
+.art-circuit {
+  position: absolute;
+  width: 120px;
+  height: 65px;
+  border-top: 1px solid rgba(37,99,235,.3);
+  border-right: 1px solid rgba(37,99,235,.3);
+}
+
+.circuit-one {
+  left: 0;
+  bottom: 12%;
+}
+
+.circuit-two {
+  right: 0;
+  top: 40%;
+  transform: rotate(180deg);
+}
+
+/* Plus symbols */
+
+.art-cross {
+  position: absolute;
+  font-size: 35px;
+  font-weight: 200;
+  color: #3b82f6;
+  opacity: .35;
+  animation: artPulse 3s ease-in-out infinite;
+}
+
+.cross-one {
+  top: 35%;
+  right: 25%;
+}
+
+.cross-two {
+  bottom: 8%;
+  left: 25%;
+  animation-delay: 1.5s;
+}
+
+/* Floating dots */
+
+.art-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3b82f6;
+  opacity: .5;
+  animation: artFloat 4s ease-in-out infinite;
+}
+
+.dot-one { top: 12%; left: 35%; }
+.dot-two { top: 48%; left: 12%; animation-delay: 1s; }
+.dot-three { right: 30%; bottom: 20%; animation-delay: 2s; }
+.dot-four { right: 12%; top: 65%; animation-delay: 1.5s; }
+
+/* Animations */
+
+@keyframes artFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+@keyframes artRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes artPulse {
+  0%, 100% { opacity: .2; }
+  50% { opacity: .7; }
+}
+
+/* Dark event card background artwork */
+
+.event-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.event-dark::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(96,165,250,.16);
+  border-radius: 50%;
+  right: -100px;
+  top: -100px;
+  animation: artRotate 25s linear infinite;
+  pointer-events: none;
+}
+
+.event-dark::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 1px dashed rgba(96,165,250,.2);
+  border-radius: 50%;
+  left: -80px;
+  bottom: -100px;
+  animation: artRotate 20s linear infinite reverse;
+  pointer-events: none;
+}
+
+.event-dark .event-content,
+.event-dark .event-image {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .art-atom {
+    left: -45px;
+    transform: scale(.7);
+  }
+
+  .art-chip {
+    right: -15px;
+    transform: scale(.7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .events-art-bg *,
+  .event-dark::before,
+  .event-dark::after {
+    animation: none !important;
+  }
+}

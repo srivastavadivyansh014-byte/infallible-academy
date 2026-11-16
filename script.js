@@ -665,3 +665,22 @@ function downloadCertificate(certificateURL) {
   link.click();
   link.remove();
 }
+
+
+
+// Events scroll reveal animation
+
+const eventObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      eventObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll(".ia-events .reveal").forEach((card) => {
+  eventObserver.observe(card);
+});
